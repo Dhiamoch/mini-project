@@ -191,9 +191,10 @@ header {
   transition: 0.2 all linear;
 }
 
-.box h3 {
+.box a {
   font-size: 0.9rem;
   font-weight: 500;
+  color: #fff;
 }
 .box span {
   font-size: 13px;

@@ -37,7 +37,6 @@
           <div class="home-text">
             <span>Now Playing</span>
             <h1>The Batman</h1>
-            <a href="#" class="btn"> Book Now </a>
           </div>
         </div>
 
@@ -46,7 +45,6 @@
           <div class="home-text">
             <span>Now Playing</span>
             <h1>Joker</h1>
-            <a href="#" class="btn"> Book Now </a>
           </div>
         </div>
 
@@ -55,7 +53,6 @@
           <div class="home-text">
             <span>Now Playing</span>
             <h1>Man of Steel</h1>
-            <a href="#" class="btn"> Book Now </a>
           </div>
         </div>
       </div>
@@ -68,91 +65,21 @@
       <h2 class="heading">Playing This Week</h2>
       <div class="movies-container">
         <!-- movies box -->
-
-        <% movies.forEach(movies =>{ %>
+        <% movies.forEach(movie =>{ %>
         <div class="box">
           <div class="box-img">
-            <img src="<%=movies.title %>" alt="" />
+            <img src="<%= movie.image %>" alt="" />
           </div>
-          <h3>The Batman</h3>
-          <span>120 min | Superhero</span>
+          <a href="#">
+            <h3><%= movie.title %></h3>
+          </a>
+
+          <span><%= movie.duration %> min | <%= movie.genre %></span>
         </div>
         <%}) %>
-
-        <div class="box">
-          <div class="box-img">
-            <img src="/movies/joker.jpg" alt="" />
-          </div>
-          <h3>Joker</h3>
-          <span>120 min | Superhero</span>
-        </div>
-
-        <div class="box">
-          <div class="box-img">
-            <img src="/movies/superman.jpg" alt="" />
-          </div>
-          <h3>Man of Steel</h3>
-          <span>120 min | Superhero</span>
-        </div>
-
-        <div class="box">
-          <div class="box-img">
-            <img src="/movies/spiderman.jpg" alt="" />
-          </div>
-          <h3>Spiderman</h3>
-          <span>120 min | Superhero</span>
-        </div>
-
-        <div class="box">
-          <div class="box-img">
-            <img src="/movies/wonderwoman.jpg" alt="" />
-          </div>
-          <h3>Wonder Woman</h3>
-          <span>120 min | Superhero</span>
-        </div>
-
-        <div class="box">
-          <div class="box-img">
-            <img src="/movies/aquaman.jpg" alt="" />
-          </div>
-          <h3>Aquaman</h3>
-          <span>120 min | Superhero</span>
-        </div>
-
-        <div class="box">
-          <div class="box-img">
-            <img src="/movies/batmanvsuperman.jpg" alt="" />
-          </div>
-          <h3>Batman vs Superman</h3>
-          <span>120 min | Superhero</span>
-        </div>
-
-        <div class="box">
-          <div class="box-img">
-            <img src="/movies/birdsofprey.jpg" alt="" />
-          </div>
-          <h3>Birds of Prey</h3>
-          <span>120 min | Superhero</span>
-        </div>
-
-        <div class="box">
-          <div class="box-img">
-            <img src="/movies/greenlantern.jpg" alt="" />
-          </div>
-          <h3>Green Lantern</h3>
-          <span>120 min | Superhero</span>
-        </div>
-
-        <div class="box">
-          <div class="box-img">
-            <img src="/movies/suicidesquad.jpg" alt="" />
-          </div>
-          <h3>Suicide Squad</h3>
-          <span>120 min | Superhero</span>
-        </div>
-        <!-- akhir -->
       </div>
     </section>
+    <!-- akhir movies -->
 
     <!-- coming -->
     <section class="coming" id="coming">

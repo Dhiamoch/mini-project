@@ -3,8 +3,10 @@ const { movie } = require("../models");
 class MovieController {
   static async getMovies(req, res) {
     try {
-      let result = await movie.findAll();
-      res.json(result);
+      let movies = await movie.findAll({
+        order: [["id", "asc"]],
+      });
+      res.render("index.ejs", { movies });
     } catch (err) {
       res.json(err);
     }
