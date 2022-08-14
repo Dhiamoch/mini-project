@@ -5,7 +5,5 @@ route.get("/", MovieController.getMovies);
 
 const movieRoute = require("./movie");
 route.use("/movies", movieRoute);
-// const shipRoutes = require("./ship");
-// route.use("/ships", shipRoutes);
 
 module.exports = route;
